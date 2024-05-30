@@ -1,8 +1,8 @@
 'use client';
-import Image from 'next/legacy/image';
 import React, { useState } from 'react';
 import { SliderData } from './SliderData';
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
+import Image from 'next/image'; // Importing Image component from next/image
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -11,6 +11,7 @@ const Slider = ({ slides }) => {
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
+
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
@@ -40,11 +41,11 @@ const Slider = ({ slides }) => {
                 size={50}
               />
               {index === current && (
-                <img
+                <Image
                   src={slide.image}
                   alt='/'
-                  width='1440'
-                  height='600'
+                  width={1440}
+                  height={600}
                   // objectFit='cover'
                 />
               )}
