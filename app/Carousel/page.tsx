@@ -1,8 +1,12 @@
-'use client';
-import React from 'react'
-import { useRouter } from 'next/navigation'
+import React from 'react';
+import { useRouter } from 'next/navigation';
 
-const Carousel = ({heading, message}) => {
+interface CarouselProps {
+  heading: string;
+  message: string;
+}
+
+const Carousel = ({ heading, message }: CarouselProps) => {
   const router = useRouter();
   return (
     <div className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img'>
@@ -14,7 +18,7 @@ const Carousel = ({heading, message}) => {
         <button className='px-8 py-2 border' onClick={() => router.push('/login')}>Login</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;
