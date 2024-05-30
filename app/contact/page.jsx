@@ -83,7 +83,7 @@ const Contact = () => {
   return (
     <div className='flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-black'>
         <div className='bg-white/20 backdrop-blur-md rounded-lg p-8 shadow-lg max-w-lg w-full'>
-            <h1 className='text-2xl font-bold text-center text-white mb-6'>Let{"'"}s work together</h1>
+        <h1 className='text-2xl font-bold text-center text-white mb-6'>Let&apos;s work together</h1>
             <form onSubmit={handleSubmit} className='space-y-4'>
                 <div className='grid grid-cols-2 gap-4'>
                     <input
